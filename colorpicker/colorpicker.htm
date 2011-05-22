@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" type="text/css" href="colorpicker.css">
+<script type="text/javascript" src="colorpicker.js"></script>
+<title>ColorPicker</title>
+</head>
+<body>
+<div id="d3">
+<div id="gradientBox"><img id="gradientImg"
+	src="color_picker_gradient.png"><img id="circle"
+	src="color_picker_circle.gif"></div>
+<div id="hueBarDiv"><img id="i1" src="color_picker_bar.png"><img
+	id="arrows" src="color_picker_arrows.gif"></div>
+<div id="d1">
+<div id="d2">
+<div id="quickColor"></div>
+<div id="staticColor"></div>
+</div>
+<br>
+<table id="t1" width="100%">
+	<tr>
+		<td>Hex:</td>
+		<td><input type="text" id="hexBox" onchange="hexBoxChanged();"></td>
+	</tr>
+	<tr>
+		<td>Red:</td>
+		<td><input type="text" id="redBox" onchange="redBoxChanged();"></td>
+	</tr>
+	<tr>
+		<td>Green:</td>
+		<td><input type="text" id="greenBox"
+			onchange="greenBoxChanged();"></td>
+	</tr>
+	<tr>
+		<td>Blue:</td>
+		<td><input type="text" id="blueBox" onchange="blueBoxChanged();"></td>
+	</tr>
+	<tr>
+		<td>Hue:</td>
+		<td><input type="text" id="hueBox" onchange="hueBoxChanged();"></td>
+	</tr>
+	<tr>
+		<td>Saturation:</td>
+		<td><input type="text" id="saturationBox"
+			onchange="saturationBoxChanged();"></td>
+	</tr>
+	<tr>
+		<td>Value:</td>
+		<td><input type="text" id="valueBox"
+			onchange="valueBoxChanged();"></td>
+	</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">
+	fixGradientImg();
+	var currentColor = Colors.ColorFromRGB(64, 128, 128);
+	new dragObject("arrows", "hueBarDiv", arrowsLowBounds, arrowsUpBounds,
+			arrowsDown, arrowsMoved, endMovement);
+	new dragObject("circle", "gradientBox", circleLowBounds, circleUpBounds,
+			circleDown, circleMoved, endMovement);
+	colorChanged('box');
+</script>
+</body>
+</html>

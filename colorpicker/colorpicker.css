@@ -1,0 +1,19 @@
+body{font-family:Tahoma,Verdana;background-color:white;font-size:10pt}
+#gradientBox,#circle,#hueBarDiv,#arrows,#quickColor,#staticColor,#d1,#d2,#t1,#i1{position:absolute}
+#gradientBox,#gradientImg,#hueBarDiv,#i1,#d1{height:256px}
+#d2,#d3{border: 1px solid black}
+#arrows{height:9px;width:35px;left:0px}
+#i1{width:19px;left:8px}
+#hueBarDiv{left:310px;width:35px;top:15px}
+#circle{height:11px;width:11px}
+#gradientImg{display:block;width:256px}
+#gradientBox{cursor:crosshair;top:15px;left:15px;width:256px}
+#d3{position:relative;height:286px;width:531px}
+#d2{height:50px;width:145px;top:0px;left:0px}
+#d1{left:370px;width:145px;top:15px}
+#quickColor{height:50px;width:73px;top:0px;left:0px}
+#staticColor{height:50px;width:72px;top:0px;left:73px}
+#t1{top:55px}
+input{width:63px}
+#copy{font-size:80%;color:blue}
+#t2{text-align:right}
